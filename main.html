@@ -32,6 +32,7 @@
         {
             display: flex;
             justify-content:center ;
+            color: #848484;
         }
 
         .aboutus
@@ -39,6 +40,7 @@
             display: flex;
             justify-content: center;
             flex-flow: row wrap;
+            color: #32a2b9;
         }
 
         .aboutus-button
@@ -58,7 +60,19 @@
             margin-left: 3%;
             margin-right: 3%;
             margin-top: 1%;
+            width: 40px;
+            height: 40px;
         }
+
+        .footer
+        {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            text-align: center;
+            font-size: 12px;
+            color: #848484;
+        }
+        
 
         @media(max-width: 1366px)
         {
@@ -78,9 +92,15 @@
             {
             display: flex;
             justify-content: center;
-            flex-direction: column;
-            align-items: center;
+            flex-flow: row wrap;
             }
+            .contactlogo-button
+        {
+            margin-top: 4%;
+            width: 30px;
+            height: 30px;
+        }
+        
         }
         @media(max-width: 700px)
         {
@@ -90,11 +110,25 @@
                 min-height: 100%;
             }
             .biaoyu
-        {
+            {
             font-weight: bold;
-            font-size: 30px;
+            font-size: 24px;
             color: white;
             margin-top: 10%;
+            }
+            .contactlogo-button
+            {
+            margin-top: 4%;
+            width: 30px;
+            height: 30px;
+            }
+
+            .footer
+        {
+            margin-top: 10%;
+            text-align: center;
+            font-size: 12px;
+            color: #848484;
         }
         }
 
@@ -134,7 +168,7 @@
     <div class="jumbotron" >
         <div class="container">
             <div class="biaoyu">
-                「探索無限可能性，挑戰自我極限。」
+                「尋覓您心之所屬，夢寐以求的大學園！」
             </div>
             <p>
                 <a class="btn btn-primary btn-lg" href="#" role="button" style="margin-top: 3%; margin-left: 3%; font-weight: bold;" >開始測試</a></p>
@@ -162,9 +196,13 @@
         </div>
 
         <div class="contactlogo">
-            <div class="contactlogo-button"><img src="img/facebook.png" alt="" style="width: 47px; height: 47px;"></div>
-            <div class="contactlogo-button"><img src="img/twitter.png" alt=""  style="width: 47px; height: 47px;"></div>
-            <div class="contactlogo-button"><img src="img/instagram.png" alt=""  style="width: 47px; height: 47px;"></div>
+            <div class="contactlogo-button"><img src="img/facebook.png" alt="" style="width: 40px; height: 40px;" ></div>
+            <div class="contactlogo-button"><img src="img/twitter.png" alt=""  style="width: 40px; height: 40px;"></div>
+            <div class="contactlogo-button"><img src="img/instagram.png" alt=""  style="width: 40px; height: 40px;"></div>
+        </div>
+
+        <div class="footer">
+            Disclaimer: All non-English versions of the website contain automated translations or translations submitted by our users. They are not binding in any way, are not guaranteed to be accurate, and have no legal effect. The official text is the English version of the website.
         </div>
 
         
