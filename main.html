@@ -6,134 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
-
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    
-
-    <style>
-        .jumbotron
-        {
-            background-image: url(img/wallpaper.png);
-            background-size:cover;
-            min-height: 614px;
-            position: relative;
-        }
-        .biaoyu
-        {
-            font-weight: bold;
-            font-size: 40px;
-            color: white;
-            margin-top: 10%;
-        }
-
-        .licences
-        {
-            display: flex;
-            justify-content:center ;
-            color: #848484;
-        }
-
-        .aboutus
-        {
-            display: flex;
-            justify-content: center;
-            flex-flow: row wrap;
-            color: #32a2b9;
-        }
-
-        .aboutus-button
-        {
-            margin: 3%;
-        }
-
-        .contactlogo
-        {
-            display: flex;
-            justify-content: center;
-            flex-flow: row wrap;
-        }
-
-        .contactlogo-button
-        {
-            margin-left: 3%;
-            margin-right: 3%;
-            margin-top: 1%;
-            width: 40px;
-            height: 40px;
-        }
-
-        .footer
-        {
-            margin-top: 3%;
-            margin-bottom: 3%;
-            text-align: center;
-            font-size: 12px;
-            color: #848484;
-        }
-        
-
-        @media(max-width: 1366px)
-        {
-            .jumbotron
-            {
-                background-size: 100% 100%;
-                min-height: 500;
-            }
-            .biaoyu
-            {
-                font-weight: bold;
-                font-size: 35px;
-                color: white;
-                margin-top: 10%;
-            }
-            .contactlogo
-            {
-            display: flex;
-            justify-content: center;
-            flex-flow: row wrap;
-            }
-            .contactlogo-button
-        {
-            margin-top: 4%;
-            width: 30px;
-            height: 30px;
-        }
-        
-        }
-        @media(max-width: 700px)
-        {
-            .jumbotron
-            {
-                background-size: 100% 100%;
-                min-height: 100%;
-            }
-            .biaoyu
-            {
-            font-weight: bold;
-            font-size: 24px;
-            color: white;
-            margin-top: 10%;
-            }
-            .contactlogo-button
-            {
-            margin-top: 4%;
-            width: 30px;
-            height: 30px;
-            }
-
-            .footer
-        {
-            margin-top: 10%;
-            text-align: center;
-            font-size: 12px;
-            color: #848484;
-        }
-        }
-
-
-    </style>
   </head>
 
   <body>
@@ -147,14 +22,14 @@
                         <span class="icon-bar" style="background-color: black;"></span>
                         <span class="icon-bar" style="background-color: black;"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="img/LOGO.png" alt="" srcset=""></a>
+                    <a class="navbar-brand" href="main.html"><img src="img/LOGO.png" alt="" srcset=""></a>
                 </div>
     
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">興趣測試</a></li>
+                        <li><a href="form.html">興趣測試</a></li>
                         <li><a href="#">科系查詢</a></li>
                         <li><a href="#">聯絡方式</a></li>
 
@@ -165,13 +40,13 @@
     <!-- 主選單結束 -->
 
     <!-- 主題廣告開始 -->
-    <div class="jumbotron" >
+    <div class="jumbotron" style="background-image: url(img/wallpaper.png);">
         <div class="container">
             <div class="biaoyu">
                 「尋覓您心之所屬，夢寐以求的大學園！」
             </div>
             <p>
-                <a class="btn btn-primary btn-lg" href="#" role="button" style="margin-top: 3%; margin-left: 3%; font-weight: bold;" >開始測試</a></p>
+                <a class="btn btn-primary btn-lg" href="form.html" role="button" style="margin-top: 3%; margin-left: 3%; font-weight: bold;" >開始測試</a></p>
             
             
         </div>
