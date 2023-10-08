@@ -4,6 +4,12 @@
     min-height: 614px;
     position: relative;
 }
+.jumbotron2
+{
+  background-size:cover;
+  min-height: 614px;
+  position: relative;
+}
 .biaoyu
 {
     font-weight: bold;
@@ -65,6 +71,12 @@
         background-size: 100% 100%;
         min-height: 500;
     }
+    .jumbotron2
+    {
+      background-size:cover;
+      min-height: 590px;
+      position: relative;
+    }
     .biaoyu
     {
         font-weight: bold;
@@ -92,6 +104,12 @@
     {
         background-size: 100% 100%;
         min-height: 100%;
+    }
+    .jumbotron2
+    {
+      background-size:cover;
+      min-height: 490px;
+      position: relative;
     }
     .biaoyu
     {
@@ -194,6 +212,16 @@
   font-weight: bold;
   font-size: large;
   margin: 0 0 15px;
+}
 
+.alert{
+  width: 100%;
+  background: rgb(0, 255, 106);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  display: none;
 }
 

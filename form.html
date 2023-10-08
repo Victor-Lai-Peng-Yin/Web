@@ -11,7 +11,7 @@
         <!-- Bootstrap -->  
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body style="background-image: url(img/wallpaper_blur.png);">
+<body>
 <!-- 主選單開始 -->
     <nav class="navbar" style="background-color: white;">
         <div class="container-fluid">
@@ -40,22 +40,25 @@
 <!-- 主選單結束 -->
 
 <!-- Login page開始 -->
+<div class="jumbotron2" style="background-image: url(img/wallpaper_blur.png);">
     <div class="login-page">
         <div class="form">
-            <form class="login-form">
+            <form class="login-form" id="contactForm">
+                <div class="alert">Your message sent</div>
                 <div class="profile">輸入個人資訊</div>
-                <input type="text" placeholder="輸入姓名"/>
-                <select name="color" id="color" class="gender">
+                <input type="text" placeholder="輸入姓名"  id="name"/>
+                <select name="color" id="gender" class="gender" >
                   <option value="輸入性別">性別</option>
                   <option value="男">男</option>
                   <option value="女">女</option>
                 </select>
-                <input type="text" placeholder="電子郵件"/>
+                <input type="text" placeholder="電子郵件" id="emailid"/>
 
-                <button>繼續</button>
+                <button type="submit">繼續</button>
             </form>
         </div>
     </div>
+</div>
 <!-- Login page結束-->
 
 <!--底部開始-->
@@ -93,7 +96,9 @@
 
     <!--底部結束-->
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="js/mail.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
