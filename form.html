@@ -45,6 +45,7 @@
         <div class="form">
             <form class="login-form" id="contactForm">
                 <div class="alert">Your message sent</div>
+                <div id="result"></div>
                 <div class="profile">輸入個人資訊</div>
                 <input type="text" placeholder="輸入姓名"  id="name"/>
                 <select name="color" id="gender" class="gender" >
@@ -53,8 +54,29 @@
                   <option value="女">女</option>
                 </select>
                 <input type="text" placeholder="電子郵件" id="emailid"/>
+                <select name="color" id="interest" class="interest" >
+                    <option value="選擇喜愛學群">選擇喜愛學群</option>
+                    <option value="資訊學群">資訊學群</option>
+                    <option value="工程學群">工程學群</option>
+                    <option value="數理化學群">數理化學群</option>
+                    <option value="醫藥衛生學群">醫藥衛生學群</option>
+                    <option value="生命科學學群">生命科學學群</option>
+                    <option value="生物資源學群">生物資源學群</option>
+                    <option value="地球與環境學群">地球與環境學群</option>
+                    <option value="外語學群">外語學群</option>
+                    <option value="文史哲學群">文史哲學群</option>
+                    <option value="教育學群">教育學群</option>
+                    <option value="法政學群">法政學群</option>
+                    <option value="管理學群">管理學群</option>
+                    <option value="財經學群">財經學群</option>
+                    <option value="社會與心理學群">社會與心理學群</option>
+                    <option value="大眾傳播學群">大眾傳播學群</option>
+                    <option value="建築與設計學群">建築與設計學群</option>
+                    <option value="藝術學群">藝術學群</option>
+                    <option value="遊憩與運動學群">遊憩與運動學群</option>
+                  </select>
 
-                <button type="submit">繼續</button>
+                <button type="submit" id="goToNextPage">繼續</button>
             </form>
         </div>
     </div>
@@ -94,11 +116,26 @@
     </div>
 </div>
 
+
+
     <!--底部結束-->
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="js/mail.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var schoolTypeSelect = document.getElementById("interest");
+        var goToNextPageButton = document.getElementById("goToNextPage");
+
+        // 当用户点击按钮时，保存所选学群到本地存储并导航到下一个页面
+        goToNextPageButton.addEventListener("click", function () {
+            var selectedSchoolType = schoolTypeSelect.value;
+            localStorage.setItem("selectedSchoolType", selectedSchoolType);
+            window.location.href = "result.html";
+        });
+    });
+</script>
 </body>
 </html>

@@ -22,8 +22,9 @@ function submitForm(e) {
   var name = getElementVal("name");
   var gender = getElementVal("gender");
   var emailid = getElementVal("emailid");
+  var interest = getElementVal("interest");
 
-  saveMessages(name, gender, emailid);
+  saveMessages(name, gender, emailid,interest);
 
   //   enable alert
   document.querySelector(".alert").style.display = "block";
@@ -37,13 +38,14 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, gender, emailid) => {
+const saveMessages = (name, gender, emailid, interest) => {
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
     name: name,
     gender: gender,
     emailid: emailid,
+    interest: interest
   });
 };
 
