@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Bootstrap 101 Template</title>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Bootstrap -->  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<!-- 主選單開始 -->
+    <nav class="navbar" style="background-color: white;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar" style="background-color: black;"></span>
+                    <span class="icon-bar" style="background-color: black;"></span>
+                    <span class="icon-bar" style="background-color: black;"></span>
+                </button>
+                <a class="navbar-brand" href="main.html"><img src="img/LOGO.png" alt="" srcset=""></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="form.html">興趣測試</a></li>
+                    <li><a href="#">科系查詢</a></li>
+                    <li><a href="#">聯絡方式</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- 主選單結束 -->
+
+<!-- Login page開始 -->
+<div class="jumbotron2" style="background-image: url(img/wallpaper_blur.png);">
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" id="contactForm">
+                <div class="alert">Your message sent</div>
+                <div id="result"></div>
+                <div class="profile">輸入個人資訊</div>
+                <input type="text" placeholder="輸入姓名"  id="name"/>
+                <select name="color" id="gender" class="gender" >
+                  <option value="輸入性別">性別</option>
+                  <option value="男">男</option>
+                  <option value="女">女</option>
+                </select>
+                <input type="text" placeholder="電子郵件" id="emailid"/>
+                <select name="color" id="education" class="gender" >
+                    <option value="學制">學制</option>
+                    <option value="大學">大學</option>
+                    <option value="研究所">研究所</option>
+                    <option value="港二技">港二技</option>
+                  </select>
+                <select name="color" id="interest" class="interest" name="interest" multiple >
+                    <option value="選擇喜愛學群">選擇喜愛學群</option>
+                    <option value="資訊學群">資訊學群</option>
+                    <option value="工程學群">工程學群</option>
+                    <option value="數理化學群">數理化學群</option>
+                    <option value="醫藥衛生學群">醫藥衛生學群</option>
+                    <option value="生命科學學群">生命科學學群</option>
+                    <option value="生物資源學群">生物資源學群</option>
+                    <option value="地球與環境學群">地球與環境學群</option>
+                    <option value="外語學群">外語學群</option>
+                    <option value="文史哲學群">文史哲學群</option>
+                    <option value="教育學群">教育學群</option>
+                    <option value="法政學群">法政學群</option>
+                    <option value="管理學群">管理學群</option>
+                    <option value="財經學群">財經學群</option>
+                    <option value="社會與心理學群">社會與心理學群</option>
+                    <option value="大眾傳播學群">大眾傳播學群</option>
+                    <option value="建築與設計學群">建築與設計學群</option>
+                    <option value="藝術學群">藝術學群</option>
+                    <option value="遊憩與運動學群">遊憩與運動學群</option>
+                  </select>
+
+                <button type="submit" id="goToNextPage">繼續</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Login page結束-->
+
+<!--底部開始-->
+<div class="haha" style="background-color: white;">
+    <div class="container">
+        <div class="licences" style="margin-top: 3%;">
+            ©2011-2023 NERIS Analytics Limited
+        </div>
+
+        <div class="aboutus">
+
+            <div class="aboutus-button">Contact</div>
+            <div class="aboutus-button">Testimonials</div>
+            <div class="aboutus-button">Terms & Conditions</div>
+            <div class="aboutus-button">Privacy & Policy</div>
+            <div class="aboutus-button">For Teams</div>
+            <div class="aboutus-button">Join Us</div>
+
+        </div>
+
+        <div class="contactlogo">
+            <div class="contactlogo-button"><img src="img/facebook.png" alt="" style="width: 40px; height: 40px;" ></div>
+            <div class="contactlogo-button"><img src="img/twitter.png" alt=""  style="width: 40px; height: 40px;"></div>
+            <div class="contactlogo-button"><img src="img/instagram.png" alt=""  style="width: 40px; height: 40px;"></div>
+        </div>
+
+        <div class="footer">
+            Disclaimer: All non-English versions of the website contain automated translations or translations submitted by our users. They are not binding in any way, are not guaranteed to be accurate, and have no legal effect. The official text is the English version of the website.
+        </div>
+
+        
+
+    </div>
+</div>
+
+
+
+    <!--底部結束-->
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="js/mail.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var schoolTypeSelect = document.getElementById("interest");
+        var goToNextPageButton = document.getElementById("goToNextPage");
+
+        // 当用户点击按钮时，保存所选学群到本地存储并导航到下一个页面
+        goToNextPageButton.addEventListener("click", function () {
+            var selectedSchoolType = schoolTypeSelect.value;
+            localStorage.setItem("selectedSchoolType", selectedSchoolType);
+            window.location.href = "result.html";
+        });
+    });
+</script>
+</body>
+</html>

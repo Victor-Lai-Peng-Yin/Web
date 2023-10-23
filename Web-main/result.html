@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>下一个页面</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Bootstrap 101 Template</title>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Bootstrap -->  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container1 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.603);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .card:hover {
+            background-color: #f0f0f0;
+        }
+        .school-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .school-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .department-name {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<!-- 主選單開始 -->
+<nav class="navbar" style="background-color: white;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color: black;"></span>
+                <span class="icon-bar" style="background-color: black;"></span>
+                <span class="icon-bar" style="background-color: black;"></span>
+            </button>
+            <a class="navbar-brand" href="main.html"><img src="img/LOGO.png" alt="" srcset=""></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="form.html">興趣測試</a></li>
+                <li><a href="#">科系查詢</a></li>
+                <li><a href="#">聯絡方式</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- 主選單結束 -->
+<!-- 學校科系顯示開始 -->
+    <div class="jumbotron2" style="background-image: url(img/wallpaper_blur.png);">
+        <div class="container1" id="schoolDepartments">
+        <!-- 在这里根据所选学群使用JavaScript来添加学院信息 -->
+        </div>
+    </div>
+<!-- 學校科系顯示結束 -->
+<!--底部開始-->
+<div class="haha" style="background-color: white;">
+    <div class="container">
+        <div class="licences" style="margin-top: 3%;">
+            ©2011-2023 NERIS Analytics Limited
+        </div>
+
+        <div class="aboutus">
+
+            <div class="aboutus-button">Contact</div>
+            <div class="aboutus-button">Testimonials</div>
+            <div class="aboutus-button">Terms & Conditions</div>
+            <div class="aboutus-button">Privacy & Policy</div>
+            <div class="aboutus-button">For Teams</div>
+            <div class="aboutus-button">Join Us</div>
+
+        </div>
+
+        <div class="contactlogo">
+            <div class="contactlogo-button"><img src="img/facebook.png" alt="" style="width: 40px; height: 40px;" ></div>
+            <div class="contactlogo-button"><img src="img/twitter.png" alt=""  style="width: 40px; height: 40px;"></div>
+            <div class="contactlogo-button"><img src="img/instagram.png" alt=""  style="width: 40px; height: 40px;"></div>
+        </div>
+
+        <div class="footer">
+            Disclaimer: All non-English versions of the website contain automated translations or translations submitted by our users. They are not binding in any way, are not guaranteed to be accurate, and have no legal effect. The official text is the English version of the website.
+        </div>
+
+        
+
+    </div>
+</div>
+
+
+
+    <!--底部結束-->
+
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var schoolDepartmentsDiv = document.getElementById("schoolDepartments");
+
+            // 学群到学院的映射
+            var departments = {
+                資訊學群: [
+                    {
+                        school: "電機工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "電子工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "資訊工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "光電工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "互動設計系媒體設計組",
+                        department: "國立臺北科技大學"
+                    },   
+                    {
+                        image: "college2.jpg",
+                        school: "資訊工程學系",
+                        department: "國立臺灣海洋大學"
+                    },    
+                    {
+                        image: "college2.jpg",
+                        school: "資訊工程學系",
+                        department: "國立臺北大學"
+                    },                 
+
+                    // 添加更多学院信息
+                ],
+                工程學群: [
+                    {
+                        image: "business1.jpg",
+                        school: "機械工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "車輛工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "能源與冷凍空調工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "電機工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "資訊工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "光電工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "化學工程與生物科技系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "分子科學與工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "分子科學與工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "分子科學與工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "土木工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "材料及資源工程系材料組",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "材料及資源工程系資源組",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "business1.jpg",
+                        school: "工業工程與管理系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "商船學系",
+                        department: "國立臺灣海洋大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "輪機工程學系",
+                        department: "國立臺灣海洋大學"
+                    },                    
+                    {
+                        image: "college1.jpg",
+                        school: "機械與機電工程學系",
+                        department: "國立臺灣海洋大學"
+                    },                   
+                    {
+                        image: "college1.jpg",
+                        school: "化學工程與生物科技系",
+                        department: "國立臺灣海洋大學"
+                    },                    
+                    {
+                        image: "college1.jpg",
+                        school: "系統工程暨造船學系",
+                        department: "國立臺灣海洋大學"
+                    },                    
+                    {
+                        image: "college1.jpg",
+                        school: "河海工程學系",
+                        department: "國立臺灣海洋大學"
+                    },                    
+                    {
+                        image: "college1.jpg",
+                        school: "電機工程學系",
+                        department: "國立臺灣海洋大學"
+                    },                    
+                    {
+                        image: "college1.jpg",
+                        school: "通訊與導航工程學系",
+                        department: "國立臺灣海洋大學"
+                    },                    
+                    {
+                        image: "college1.jpg",
+                        school: "光電與材料科技學系",
+                        department: "國立臺灣海洋大學"
+                    },                    
+                    {
+                        image: "college1.jpg",
+                        school: "海洋工程科技學士學位學程",
+                        department: "國立臺灣海洋大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "通訊工程學系",
+                        department: "國立臺北大學"
+                    },                     {
+                        image: "college2.jpg",
+                        school: "電機工程學系",
+                        department: "國立臺北大學"
+                    }, 
+                    {
+                        image: "college1.jpg",
+                        school: "生物醫學工程學系",
+                        department: "臺北醫藥大學"
+                    },
+
+
+                    
+                    // 添加更多学院信息
+                ],
+                數理化學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "化學工程與生物科技系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "分子科學與工程系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "材料及資源工程系材料組",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "材料及資源工程系資源組",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "統計學系",
+                        department: "國立臺北大學"
+                    },                      
+
+                    // 添加更多学院信息
+                ],
+                醫藥衛生學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "醫學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "呼吸治療學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "牙醫學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "口腔衛生學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "牙體技術學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "藥學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "護理系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "高齡健康管理學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "保健營養學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "食品安全學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "公共衛生學系",
+                        department: "臺北醫藥大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "醫學檢驗暨生物技術學系",
+                        department: "臺北醫藥大學"
+                    },
+
+                 
+
+                    // 添加更多学院信息
+                ],
+                生命科學學群: [
+                    {
+                        image: "college2.jpg",
+                        school: "生命科學暨生物科技學系",
+                        department: "國立臺灣海洋大學"
+                    }, 
+                    {
+                        image: "college2.jpg",
+                        school: "海洋生物科技學士學位學程",
+                        department: "國立臺灣海洋大學"
+                    }, 
+                ],
+                生物資源學群: [
+                    {
+                        image: "college2.jpg",
+                        school: "水產養殖學系",
+                        department: "國立臺灣海洋大學"
+                    }, 
+                    {
+                        image: "college2.jpg",
+                        school: "食品科學系",
+                        department: "國立臺灣海洋大學"
+                    }, 
+                    {
+                        image: "college2.jpg",
+                        school: "環境生物與漁業科學學系",
+                        department: "國立臺灣海洋大學"
+                    },
+                ],
+                地球與環境學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "海洋環境資訊系",
+                        department: "國立臺灣海洋大學"
+                    },
+                ],
+                外語學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "應用英文系",
+                        department: "國立臺北科技大學"
+                    },
+                ],
+                文史哲學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "文化事業發展系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "中國文學系",
+                        department: "國立臺北大學"
+                    }, 
+                    {
+                        image: "college2.jpg",
+                        school: "歷史學系",
+                        department: "國立臺北大學"
+                    }, 
+                ],
+                教育學群: [],
+                法政學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "海洋法政學士學位學程",
+                        department: "國立臺灣海洋大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "法律系",
+                        department: "國立臺北大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "公共行政暨政策學系",
+                        department: "國立臺北大學"
+                    }, 
+                ],
+                管理學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "工業工程與管理系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "經營管理系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "航運管理學系",
+                        department: "國立臺灣海洋大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "運輸科學系",
+                        department: "國立臺灣海洋大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "海洋觀光管理學士學位學程",
+                        department: "國立臺灣海洋大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "海洋經營管理學士學位學程",
+                        department: "國立臺灣海洋大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "企業管理學系",
+                        department: "國立臺北大學"
+                    },
+                    {
+                        image: "college2.jpg",
+                        school: "休閒運動與管理學系",
+                        department: "國立臺北大學"
+                    },    
+                    {
+                        image: "college2.jpg",
+                        school: "公共行政暨政策學系",
+                        department: "國立臺北大學"
+                    },    
+                    {
+                        image: "college2.jpg",
+                        school: "不動產與城鄉環境學系",
+                        department: "國立臺北大學"
+                    },   
+                    {
+                        image: "college1.jpg",
+                        school: "醫務管理學系",
+                        department: "臺北醫藥大學"
+                    }, 
+                ],
+                財經學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "資訊與財金管理系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "企業管理學系",
+                        department: "國立臺北大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "金融與合作經營學系",
+                        department: "國立臺北大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "財政學系",
+                        department: "國立臺北大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "經濟學系",
+                        department: "國立臺北大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "會計學系",
+                        department: "國立臺北大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "統計學系",
+                        department: "國立臺北大學"
+                    },
+
+                ],
+                社會與心理學群: [
+                    {
+                        image: "college2.jpg",
+                        school: "社會學系",
+                        department: "國立臺北大學"
+                    }, 
+                    {
+                        image: "college2.jpg",
+                        school: "社會工作學系",
+                        department: "國立臺北大學"
+                    }, 
+                ],
+                大眾傳播學群: [],
+                建築與設計學群: [
+                    {
+                        image: "college1.jpg",
+                        school: "互動設計系媒體設計組",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "互動設計系視覺傳達設計組",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "工業設計系產品設計組",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "工業設計系家具與室內設計組",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "建築系",
+                        department: "國立臺北科技大學"
+                    },
+                    {
+                        image: "college1.jpg",
+                        school: "海洋文創設計產業學士學位學程",
+                        department: "國立臺灣海洋大學"
+                    },
+                ],
+                遊憩與運動學群: [
+                    {
+                        image: "college2.jpg",
+                        school: "休閒運動與管理學系",
+                        department: "國立臺北大學"
+                    },   
+                ],
+                
+                
+                // 添加其他学群和学校到学院的映射
+            };
+
+            // 根据所选学群添加与学院相关的信息
+            var selectedSchoolType = localStorage.getItem("selectedSchoolType");
+            var schoolInfo = departments[selectedSchoolType] || [];
+            schoolInfo.forEach(function (college) {
+                var card = document.createElement("div");
+                card.className = "card";
+
+
+
+                var schoolName = document.createElement("div");
+                schoolName.className = "school-name";
+                schoolName.textContent = college.school;
+                card.appendChild(schoolName);
+
+                var departmentName = document.createElement("div");
+                departmentName.className = "department-name";
+                departmentName.textContent = college.department;
+                card.appendChild(departmentName);
+
+                schoolDepartmentsDiv.appendChild(card);
+            });
+        });
+    </script>
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="js/mail.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
