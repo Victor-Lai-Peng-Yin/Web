@@ -22,9 +22,10 @@ function submitForm(e) {
   var name = getElementVal("name");
   var gender = getElementVal("gender");
   var emailid = getElementVal("emailid");
-  var interest = getElementVal("interest");
+  var education = getElementVal("education");
+  var interests = getElementVal("interest");
 
-  saveMessages(name, gender, emailid,interest);
+  saveMessages(name, gender,education,emailid,interests);
 
   //   enable alert
   document.querySelector(".alert").style.display = "block";
@@ -38,17 +39,31 @@ function submitForm(e) {
   document.getElementById("contactForm").reset();
 }
 
-const saveMessages = (name, gender, emailid, interest) => {
+const saveMessages = (name, gender, emailid,education, interests) => {
   var newContactForm = contactFormDB.push();
 
   newContactForm.set({
     name: name,
     gender: gender,
     emailid: emailid,
-    interest: interest
+    education: education,
+    interest: interests
   });
 };
 
 const getElementVal = (id) => {
-  return document.getElementById(id).value;
+  if (id === "interest") {
+    // 處理下拉式多選選單
+    var selectElement = document.getElementById(id);
+    var selectedOptions = [];
+    for (var i = 0; i < selectElement.options.length; i++) {
+      if (selectElement.options[i].selected) {
+        selectedOptions.push(selectElement.options[i].value);
+      }
+    }
+    return selectedOptions;
+  } else {
+    // 處理其他輸入元素
+    return document.getElementById(id).value;
+  }
 };

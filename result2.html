@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="result">
+        <h1>這是你的個人資料</h1>
+        <p>
+            姓名: <span id="resultName"></span><br>
+            性別: <span id="resultGender"></span><br>
+            電子郵件: <span id="resultEmail"></span><br>
+            學制: <span id="resultEducation"></span><br>
+            有興趣學群: <span id="resultInterests"></span><br>
+        </p>
+        <h1>推薦的研究所科系：</h1>
+        <p>
+            <!-- 在这里显示大学学科的推荐结果 -->
+        </p>
+    </div>
+    
+    <script>
+        // 解析 URL 参数
+        const queryParams = new URLSearchParams(window.location.search);
+    
+        // 获取参数的值
+        const name = queryParams.get("name");
+        const gender = queryParams.get("gender");
+        const email = queryParams.get("email");
+        const education = queryParams.get("education");
+        const interests = queryParams.get("interests").split(",");
+    
+        // 将参数的值显示在页面上
+        document.getElementById("resultName").textContent = name;
+        document.getElementById("resultGender").textContent = gender;
+        document.getElementById("resultEmail").textContent = email;
+        document.getElementById("resultEducation").textContent = education;
+        document.getElementById("resultInterests").textContent = interests.join(", ");
+    </script>
+</body>
+</html>

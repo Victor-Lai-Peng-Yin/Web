@@ -54,7 +54,13 @@
                   <option value="女">女</option>
                 </select>
                 <input type="text" placeholder="電子郵件" id="emailid"/>
-                <select name="color" id="interest" class="interest" >
+                <select name="color" id="education" class="gender" >
+                    <option value="學制">學制</option>
+                    <option value="大學">大學</option>
+                    <option value="研究所">研究所</option>
+                    <option value="港二技">港二技</option>
+                  </select>
+                <select name="color" id="interest" class="interest" name="interest" multiple >
                     <option value="選擇喜愛學群">選擇喜愛學群</option>
                     <option value="資訊學群">資訊學群</option>
                     <option value="工程學群">工程學群</option>
@@ -125,17 +131,28 @@
    <script src="js/mail.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var schoolTypeSelect = document.getElementById("interest");
-        var goToNextPageButton = document.getElementById("goToNextPage");
+    document.getElementById("goToNextPage").addEventListener("click", function() {
+        // 获取用户输入的数据
+        var name = document.getElementById("name").value;
+        var gender = document.getElementById("gender").value;
+        var email = document.getElementById("emailid").value;
+        var education = document.getElementById("education").value;
+        var interests = Array.from(document.getElementById("interest").selectedOptions).map(option => option.value);
 
-        // 当用户点击按钮时，保存所选学群到本地存储并导航到下一个页面
-        goToNextPageButton.addEventListener("click", function () {
-            var selectedSchoolType = schoolTypeSelect.value;
-            localStorage.setItem("selectedSchoolType", selectedSchoolType);
-            window.location.href = "result.html";
-        });
+        // 构建 URL 参数字符串
+        var queryParams = `?name=${name}&gender=${gender}&email=${email}&education=${education}&interests=${interests.join(",")}`;
+
+        // 根据学制重定向到不同的结果页面
+        if (education === "大學") {
+            window.location.href = "result1.html" + queryParams;
+        } else if (education === "研究所") {
+            window.location.href = "result2.html" + queryParams;
+        } else if (education === "港二技") {
+            window.location.href = "result3.html" + queryParams;
+        }
     });
+
+    
 </script>
 </body>
 </html>
