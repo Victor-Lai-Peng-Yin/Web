@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>推薦結果</title>
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap -->  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+        <!-- 主選單開始 -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar" style="background-color: black;"></span>
+                        <span class="icon-bar" style="background-color: black;"></span>
+                        <span class="icon-bar" style="background-color: black;"></span>
+                    </button>
+                    <a class="navbar-brand" href="main.html"><img src="img/LOGO.png" alt="" srcset=""></a>
+                </div>
+    
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="form.html">興趣測試</a></li>
+                        <li><a href="#">科系查詢</a></li>
+                        <li><a href="#">聯絡方式</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- 主選單結束 -->
     <div class="result">
         <h1>這是你的個人資料</h1>
         <p>
@@ -16,61 +46,44 @@
             有興趣學群: <span id="resultInterests"></span><br>
         </p>
         <h1>推薦的大學科系：</h1>
-        <ul id="resultDepartments">
-            <!-- 推薦的大學科系將在這裡顯示 -->
-        </ul>
+        <div id="resultDepartments" class="resultD">
+        </div>
     </div>
-
-    <script>
-        // 解析 URL 参数
-        const queryParams = new URLSearchParams(window.location.search);
-
-        // 獲取參數的值
-        const name = queryParams.get("name");
-        const gender = queryParams.get("gender");
-        const email = queryParams.get("email");
-        const education = queryParams.get("education");
-        const interests = queryParams.get("interests").split(",");
-        
-        // 顯示參數的值在頁面上
-        document.getElementById("resultName").textContent = name;
-        document.getElementById("resultGender").textContent = gender;
-        document.getElementById("resultEmail").textContent = email;
-        document.getElementById("resultEducation").textContent = education;
-        document.getElementById("resultInterests").textContent = interests.join(", ");
-        
-        // 大學科系信息
-        var universityDepartments = {
-            "工程學群": ["國立臺北科技大學, 電子工程系", "國立臺北科技大學, 光電工程系"],
+        <!--底部開始-->
+        <div class="container">
+            <div class="licences">
+                ©2011-2023 NERIS Analytics Limited
+            </div>
+    
+            <div class="aboutus">
+    
+                <div class="aboutus-button">Contact</div>
+                <div class="aboutus-button">Testimonials</div>
+                <div class="aboutus-button">Terms & Conditions</div>
+                <div class="aboutus-button">Privacy & Policy</div>
+                <div class="aboutus-button">For Teams</div>
+                <div class="aboutus-button">Join Us</div>
+    
+            </div>
+    
+            <div class="contactlogo">
+                <div class="contactlogo-button"><img src="img/facebook.png" alt="" style="width: 40px; height: 40px;" ></div>
+                <div class="contactlogo-button"><img src="img/twitter.png" alt=""  style="width: 40px; height: 40px;"></div>
+                <div class="contactlogo-button"><img src="img/instagram.png" alt=""  style="width: 40px; height: 40px;"></div>
+            </div>
+    
+            <div class="footer">
+                Disclaimer: All non-English versions of the website contain automated translations or translations submitted by our users. They are not binding in any way, are not guaranteed to be accurate, and have no legal effect. The official text is the English version of the website.
+            </div>
+    
             
-            "醫藥衛生學群": ["臺北醫藥大學, 牙醫學系", "臺北醫藥大學, 呼吸治療學系"],
-            // 其他學群和科系
-        };
-        
-        // 獲取用戶選擇的學群
-        var selectedInterests = interests;
-        
-        // 創建一個陣列來存儲匹配的大學科系
-        var recommendedDepartments = [];
-        
-        // 遍歷用戶選擇的學群，將匹配的大學科系添加到recommendedDepartments陣列中
-        for (var i = 0; i < selectedInterests.length; i++) {
-            var interest = selectedInterests[i];
-            if (universityDepartments[interest]) {
-                recommendedDepartments = recommendedDepartments.concat(universityDepartments[interest]);
-            }
-        }
-        
-        // 獲取顯示結果的DOM元素
-        var resultDepartments = document.getElementById("resultDepartments");
-        
-        // 遍歷recommendedDepartments陣列，創建列表項並添加到結果頁面
-        for (var j = 0; j < recommendedDepartments.length; j++) {
-            var department = recommendedDepartments[j];
-            var listItem = document.createElement("li");
-            listItem.textContent = department;
-            resultDepartments.appendChild(listItem);
-        }
-    </script>
+    
+        </div>
+    
+        <!--底部結束-->
+    
+
+<script src="js/result.js"></script>
 </body>
 </html>
+
