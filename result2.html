@@ -74,7 +74,9 @@
         <h2>ntpu1949@gm.ntpu.edu.tw</h2>
         </div>
 
-        <button></button>
+                <button id="saveUrl" class="bubbly-button">
+            點擊保存結果
+        </button>
     </div>
         <!--底部開始-->
         <div class="container">
@@ -109,7 +111,21 @@
     
         <!--底部結束-->
     
-
+        <script>
+            // 你的其他 JavaScript 代码
+            
+            // 保存当前网址按钮点击事件
+            document.getElementById("saveUrl").addEventListener("click", function() {
+                var url = window.location.href;
+                var element = document.createElement('a');
+                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(url));
+                element.setAttribute('download', 'current_page_url.html');
+                element.style.display = 'none';
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+            });
+        </script>
 <script src="js/result2.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
