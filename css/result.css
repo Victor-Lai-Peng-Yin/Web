@@ -19,7 +19,16 @@ background-attachment: fixed;
 
 animation:bganimation 30s infinite;
 }
+.bubbly-button
+{
+    margin-top: 5%;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    background-color:  #3688b4;
+    border: none;
 
+}
 .result h1{
     margin: 5%;
     font-weight: bold;
