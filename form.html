@@ -54,7 +54,7 @@
                   <option value="女">女</option>
                 </select>
                 <input type="text" placeholder="電子郵件" id="emailid"/>
-                <select name="color" id="education" class="gender" >
+                <select name="color" id="education" class="gender" onchange="toggleEducationGroup()">
                     <option value="學制">學制</option>
                     <option value="大學">大學</option>
                     <option value="研究所">研究所</option>
@@ -129,6 +129,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="js/mail.js"></script>
+   <script src="js/hide.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script>
     document.getElementById("goToNextPage").addEventListener("click", function() {
