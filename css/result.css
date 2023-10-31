@@ -19,6 +19,11 @@ background-attachment: fixed;
 
 animation:bganimation 30s infinite;
 }
+
+.svg{
+    width: 100px;
+    height: 100px;
+}
 .bubbly-button
 {
     margin-top: 5%;
@@ -84,4 +89,13 @@ animation:bganimation 30s infinite;
                -100% 200%,
                200% -100%;
       }
+}
+
+@media(max-width: 1366px)
+{
+.svg
+{
+    width: 60px;
+    height: 60px;
+}
 }
