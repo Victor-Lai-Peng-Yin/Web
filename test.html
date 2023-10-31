@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Example</title>
+</head>
+<body>
+    <p>用户的电子邮件地址：</p>
+    <input type="text" id="userEmail" value="user@example.com">
+    <button id="sendEmailButton">发送邮件</button>
+
+    <script>
+        document.getElementById("sendEmailButton").addEventListener("click", function() {
+            const userEmail = document.getElementById("userEmail").value;
+            const subject = "邮件主题";
+            const body = "邮件正文";
+            const mailtoLink = `mailto:${userEmail}?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>

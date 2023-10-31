@@ -191,3 +191,26 @@ for (var j = 0; j < recommendedDepartments.length; j++) {
     listItem.textContent = department;
     resultDepartments.appendChild(listItem);
 }
+
+var btn = document.getElementById('sendEmailButton');
+
+btn.addEventListener('click',function(e)
+{
+    e.preventDefault()
+    var name = document.getElementById('resultName').value;
+    document.getElementById("resultEmail").textContent = email;
+    var body = 'name:' + name +'<br/> email:'+ email;
+    console.log(email);
+
+Email.send({
+Host : "smtp.elasticemail.com",
+Username : "penguinlai4@gmail.com",
+Password : "AFB8354519A6271592DBAEE13591439E3FA1",
+To : email,
+From : "penguinlai4@gmail.com",
+Subject : "This is the subject",
+Body : body
+}).then(
+message => alert(message)
+);
+})
