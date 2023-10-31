@@ -199,8 +199,8 @@ btn.addEventListener('click',function(e)
     e.preventDefault()
     document.getElementById("resultName").textContent = name;
     document.getElementById("resultEmail").textContent = email;
-    var body = 'name:' + name +'<br/> email:'+ email + '<br/>' +window.location.href;
-    console.log(email);
+    var body = 'name:' + name +'<br/> email:'+ email + '<br/>' + window.location.href;
+    console.log(window.location.href);
 
 Email.send({
 Host : "smtp.elasticemail.com",
