@@ -197,7 +197,7 @@ var btn = document.getElementById('sendEmailButton');
 btn.addEventListener('click',function(e)
 {
     e.preventDefault()
-    var name = document.getElementById('resultName').value;
+    document.getElementById("resultName").textContent = name;
     document.getElementById("resultEmail").textContent = email;
     var body = 'name:' + name +'<br/> email:'+ email;
     console.log(email);
@@ -208,7 +208,7 @@ Username : "penguinlai4@gmail.com",
 Password : "AFB8354519A6271592DBAEE13591439E3FA1",
 To : email,
 From : "penguinlai4@gmail.com",
-Subject : "This is the subject",
+Subject : "恭喜您已完成四校升學測試，這是您的結果",
 Body : body
 }).then(
 message => alert(message)
